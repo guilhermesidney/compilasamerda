@@ -197,8 +197,8 @@ class Player final : public Creature, public Cylinder
 		void kickPlayer(bool displayEffect);
 
 		static uint64_t getExpForLevel(int32_t lv) {
-		lv--;
-		return ((150ULL * lv * lv) - (50ULL * lv * lv) + (1200ULL)) / 3ULL;
+			lv--;
+			return ((50ULL * lv * lv * lv) - (150ULL * lv * lv) + (800ULL * lv)) / 5ULL;
 		}
 
 		uint16_t getStaminaMinutes() const {
